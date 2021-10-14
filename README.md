@@ -14,7 +14,9 @@ The directories are then passed to Get-MAAclRule, which does the work or retriev
 An object per ACL rule will be returned. To save these to SQL, simply pipe them to _Add-FileShareRuleToSQL_
 The additional ScanDate attribute enables tracking of changes over time.
 
-`Get-FileSharePermissions -Path "\\Server\Sharename" | Add-FileShareRuleToSQL`
+```ps
+Get-FileSharePermissions -Path "\\Server\Sharename" | Add-FileShareRuleToSQL`
+```
 
 **Using the function _Add-FileSharePermissionToSQL_**
 
