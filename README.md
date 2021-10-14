@@ -1,7 +1,7 @@
 # PowerShell
 My public PowerShell code
 
-## File Share Proceedure
+## File Share Procedure
 
 ### Investigation & Recording
 
