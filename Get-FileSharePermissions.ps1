@@ -2,7 +2,7 @@ function Get-FileSharePermissions {
     [CmdletBinding()]
     param (
         [Parameter(Position=0,Mandatory,ValueFromPipeline,ValueFromPipelineByPropertyName)]
-        [alias("Dir","FullName","FullPath")
+        [alias("Dir","FullName","FullPath")]
         [string]$Path,
         [switch]$NoRecurse
     )
