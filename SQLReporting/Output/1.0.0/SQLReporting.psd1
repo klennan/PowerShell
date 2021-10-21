@@ -24,7 +24,7 @@ GUID = 'cda3d502-5e6e-43c7-bf50-62c39732009e'
 Author = 'Kevin Lennan'
 
 # Company or vendor of this module
-CompanyName = 'UKHS'
+CompanyName = ''
 
 # Copyright statement for this module
 Copyright = '(c) 2020 Kevin Lennan. All rights reserved.'
