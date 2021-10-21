@@ -86,6 +86,6 @@ if ($Publish) {
     if ($Comment) {
         Add-Content -Path .\README.md -Value "`n`n  $Comment"
     }
-    Write-Verbose "Publishing module to UKHS PSGallery..."
-    Publish-Module -Repository UKHS -NuGetApiKey $env:NuGetApiKey -Name "$versionOutputDir\$ModuleName.psd1"
+    Write-Verbose "Publishing module to local PSGallery..."
+    Publish-Module -Repository local -NuGetApiKey $env:NuGetApiKey -Name "$versionOutputDir\$ModuleName.psd1"
 }
