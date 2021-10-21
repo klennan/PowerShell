@@ -14,11 +14,11 @@ function Get-SecureGroupNames {
     {
         $ShareHost = $FullPath.Split("\")[2] # \\ServerName
         $ShareRoot = $FullPath.Split("\")[3] # ..\RootShare
-        if (($env:USERDOMAIN -eq "KUHA") -and (
-            ($FullPath.toLower().StartsWith("\\kuha.kumed.com\shares\departments")) -or
-            ($FullPath.toLower().StartsWith("\\kuha\shares\departments"))
+        if (($env:USERDOMAIN -eq "COMPANY") -and (
+            ($FullPath.toLower().StartsWith("\\Server\shares")) -or
+            ($FullPath.toLower().StartsWith("\\FileServer\shares"))
             )) {
-            $ShareRoot = "Shares\Departments"
+            $ShareRoot = "Shares"
         }
         $ParentPath = Split-Path $FullPath -Parent
         $ShareGroupName = $FullPath -iReplace [regex]::Escape("\\$ShareHost\$ShareRoot\"),"" -Replace "_","" -Replace [regex]::Escape("\"),"_" -Replace " ","" -Replace ",","-" -Replace "'",""
